@@ -10,6 +10,7 @@ import { useDebouncedEffect } from "@/lib/use-debounced-effect";
 import { parseCsvToTools } from "@/lib/csv-parser";
 import { exportElementToPdf } from "@/lib/pdf-export";
 import { Card } from "./Card";
+import { SuggestionBox } from "./SuggestionBox";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -329,6 +330,10 @@ export function SaasAudit({ currency, rates }: { currency: Currency; rates?: Rec
             </Card>
           )}
         </div>
+      </div>
+
+      <div style={{ marginTop: "1rem" }}>
+        <SuggestionBox />
       </div>
     </div>
   );
